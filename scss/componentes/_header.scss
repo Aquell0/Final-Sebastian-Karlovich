@@ -1,0 +1,50 @@
+#header{
+    background-color: map-get($map: $colores, $key: fondo-primario);
+    position: sticky; 
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: $espaciado;
+    div a{text-decoration: none;
+        &:link{
+            color: map-get($map: $colores, $key: textos-primario)
+        }
+    };
+    .menu{
+        @extend %flex-center;
+        ul{
+            display: flex;
+            list-style-type: none;
+        }
+        li{
+            margin-left:20px;
+            a{
+            text-decoration: none;
+            &:link{
+                color: map-get($map: $colores, $key: textos-primario)
+            }
+            }
+        }
+    }
+  
+}
+
+@media(max-width: 480px){
+    header{
+        height: 120px;
+        justify-content:space-around;
+    }
+    header p {
+        font-size: 1.5rem;
+    }
+    header nav ul{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:2px
+    }}
+
+

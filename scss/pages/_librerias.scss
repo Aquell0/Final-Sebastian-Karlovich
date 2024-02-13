@@ -1,0 +1,40 @@
+#mainlibrerias {
+    .cards-librerias {
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        grid-template-rows: repeat(5, 1fr);
+        justify-content: center;
+        .card {
+            width: 350px;
+            margin: 5px;
+            padding: 10px;
+            transition: transform .5s;
+        }
+        .card:hover{
+            transform: scale(1.03)
+        }  
+    }
+}
+
+
+.ig-link::after {
+    content: "";
+    background-image: url(/img/instagram.png);
+    background-size: contain;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+@media(max-width: 480px) {
+    #mainlibrerias {
+        .cards-librerias {
+            display: grid;
+            grid-template-columns: repeat(1, 400px);
+            grid-template-rows: repeat(5, 1fr);
+            justify-content: center;}
+        }
+        iframe{
+            width: 100%;
+        }
+    }

@@ -1,0 +1,36 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: $espaciado;
+    background-color: map-get($map: $colores, $key: fondo-primario);
+    position:static;
+    bottom:0;
+    div{
+       p{
+          color: map-get($map: $colores, $key: texto-primario);
+       }
+    };
+    nav{
+       a{
+          color: map-get($map: $colores, $key: texto-primario);
+          text-decoration: none;
+          align-items: end;
+          img{
+            max-width: 50px;
+          }
+       }
+    }
+ }
+
+ @media(max-width: 480px){
+   footer{
+       height: 100px;
+       justify-content: center;
+   };
+   footer p {
+       display: none;
+   };
+   nav a{
+      padding: 5px;
+   }
+   }
